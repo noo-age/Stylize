@@ -8,7 +8,7 @@ Now that you have a .jsonl file for training, follow the instructions at https:/
 
 # example
 
-A 'davinci' model trained on ~50 paragraphs taken and summarized by gpt-3.5-turbo from _Speak, Memory_, by Vladimir Nabokov.
+A 'davinci' model trained on ~50 paragraphs taken and summarized by gpt-3.5-turbo from _Speak, Memory_, by Vladimir Nabokov. (Note, performance varies wildly)
 
 [Prompt] A stranger and I talk in the Alexanderplatz of Berlin. We talk lengthily about the price of bread, noting that it has gone above 5 marks per loaf.
 
