@@ -19,6 +19,8 @@ SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 # The ID of a sample document.
 DOCUMENT_ID = '14J_TlsjHUXdw65tm2sN_DuKYlzf97zC9qUQ1nrqEpg8'
 
+txt_file = 'doc.txt'
+
 def read_paragraph_element(element):
     """Returns the text in the given ParagraphElement.
 
@@ -87,7 +89,7 @@ def main():
         document = service.documents().get(documentId=DOCUMENT_ID).execute()
         doc_content = read_structural_elements(document.get('body').get('content'))
         doc_content.split('\n')
-        with open('doc.txt', 'w') as f:
+        with open(txt_file, 'w') as f:
             for element in doc_content:
                 f.write(element)
     except HttpError as err:
