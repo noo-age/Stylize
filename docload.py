@@ -1,6 +1,7 @@
 """
 Loads a google doc into a file called doc.txt, one paragraph per line.
 Replace the DOCUMENT_ID variable with your own.
+Requires a credentials.json file from Google.
 """
 
 from __future__ import print_function
