@@ -10,10 +10,8 @@ Now that you have a .jsonl file for training, follow the instructions at https:/
 
 A 'davinci' model trained on ~50 paragraphs taken and summarized by gpt-3.5-turbo from _Speak, Memory_, by Vladimir Nabokov. (Note, performance varies wildly)
 
-[Prompt] A stranger and I talk in the Alexanderplatz of Berlin. We talk lengthily about the price of bread, noting that it has gone above 5 marks per loaf.
-
-### 
-
+[Prompt] A stranger and I talk in the Alexanderplatz of Berlin. We talk lengthily about the price of bread, noting that it has gone above 5 marks per loaf.###
+ 
 [Completion] I have never had the pleasure of meeting my alter ego (if I may use the term), but long ago, in a place numberless miles beyond the black wastes wherein grim nations trample an evil past, I did have an exceedingly strange conversation with another stranger (perhaps another I) in the crowded Alexanderplatz of Berlin. I do not recall the date; let us say it was September 1914. It was not a very talkative Frenchest-y stranger who addressed me, but I talked (to myself, in retrospect) with great prolixity about the price of bread, which had just gone up to something over five marks per loaf. I argued with him interminably about that rise, noting with approval that the umbrage it had given rise to among the hungry masses was unappeasable and that proletarian mutterings were swelling to a roar. It pleased me to imagine my fellow stranger slightly bewildered by this strange talk.###
 
 
