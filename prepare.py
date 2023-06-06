@@ -48,7 +48,7 @@ for element in lines:
             {"role": "user", "content": element}
         ]
     )
-    append_to_jsonl(completion.choices[0].message.content + "\n\n###\n\n"," " + element + "###", jsonl_file)
+    append_to_jsonl(completion.choices[0].message.content + " ->"," " + element + "###", jsonl_file)
 
 
         
