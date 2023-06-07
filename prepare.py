@@ -14,7 +14,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 model = "gpt-4"
 jsonl_file = "data/6-07.jsonl"
-doc_file = "doc.txt"
+doc_file = "texts/spkmem.txt"
 
 #appends prompt+completion string pair as a json object to file.jsonl
 def append_to_jsonl(prompt, completion, file):
@@ -38,7 +38,10 @@ def append_to_jsonl(prompt, completion, file):
 #reads doc.txt, creates summary of every line, and appends summary-original text pair to data.jsonl
 with open(doc_file, 'r') as f:
     lines = f.readlines()
+count = 0
 for element in lines:
+    if element == "":
+        continue
     completion = openai.ChatCompletion.create(
         model=model,
         temperature=0,
@@ -49,6 +52,5 @@ for element in lines:
         ]
     )
     append_to_jsonl(completion.choices[0].message.content + " ->"," " + element + "###", jsonl_file)
-
 
         
