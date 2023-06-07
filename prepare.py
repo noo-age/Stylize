@@ -12,8 +12,8 @@ import json
 load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-model = "gpt-3.5-turbo"
-jsonl_file = "data/5-28.jsonl"
+model = "gpt-4"
+jsonl_file = "data/6-07.jsonl"
 doc_file = "doc.txt"
 
 #appends prompt+completion string pair as a json object to file.jsonl
