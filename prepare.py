@@ -47,7 +47,7 @@ for element in lines:
         temperature=0,
         max_tokens=256,
         messages=[
-            {"role": "system", "content": "You will be given an excerpt from a text. Compress the excerpt as tightly as possible while keeping any important details, such as characters, dialogues, and passage of time. Mention at the beginning of your response whether the text is in first-person, second-person, or third-person."},
+            {"role": "system", "content": "You will be given an excerpt from a text. Compress the excerpt as tightly as possible. Keep important details the same: characters, dialogue, passage of time, tense, and point-of-view."},
             {"role": "user", "content": element}
         ]
     )
