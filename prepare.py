@@ -45,7 +45,7 @@ for element in lines:
     completion = openai.ChatCompletion.create(
         model=model,
         temperature=0,
-        max_tokens=256,
+        max_tokens=512,
         messages=[
             {"role": "system", "content": "You will be given an excerpt from a text. Compress the excerpt as tightly as possible. Keep important details the same: characters, dialogue, passage of time, tense, and point-of-view."},
             {"role": "user", "content": element}
