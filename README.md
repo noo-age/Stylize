@@ -6,6 +6,9 @@ Adjust the json_file and doc_file variables at the top of prepare.py. These are 
 
 Now that you have a .jsonl file for training, follow the instructions at https://platform.openai.com/docs/guides/fine-tuning to create a fine-tuned model. 
 
+# included files
+The 'data' directory contains two .jsonl files of prompt-completion pairs, named based on the date they were created, which is how openai labels fine-tuned models. The 'examples' directory will include stories modified/created using my fine-tuned models. The 'texts' directory contains the full text of a few books which can be used to create fine-tuning examples. 
+
 # example
 
 A 'davinci' model trained on ~50 paragraphs taken and summarized by gpt-3.5-turbo from _Speak, Memory_ by Vladimir Nabokov. (The training data is in data/5-28.jsonl, and note that performance varies wildly). 
