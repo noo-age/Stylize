@@ -13,8 +13,9 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 model = "gpt-4"
-jsonl_file = "data/6-07.jsonl"
-doc_file = "texts/spkmem.txt"
+jsonl_file = "data/07-01.jsonl"
+doc_file = "doc.txt"
+system_message = "You will be given an excerpt from a text. Compress the excerpt as tightly as possible. Keep important details the same: characters, dialogue, passage of time, tense, and point-of-view."
 
 #appends prompt+completion string pair as a json object to file.jsonl
 def append_to_jsonl(prompt, completion, file):
@@ -33,7 +34,17 @@ def append_to_jsonl(prompt, completion, file):
     with open(file, append_write) as file:
         file.write(json_data)
         file.write('\n')
+        
+def remove_double_newlines(input):
+    text = ""
+    with open(input, 'r') as f:
+        text = f.read()
+        
+    text = text.replace("\n\n", "\n")
+    with open(input, 'w') as f:
+        f.write(text)
 
+remove_double_newlines(doc_file)
 
 #reads doc.txt, creates summary of every line, and appends summary-original text pair to data.jsonl
 with open(doc_file, 'r') as f:
@@ -47,7 +58,7 @@ for element in lines:
         temperature=0,
         max_tokens=512,
         messages=[
-            {"role": "system", "content": "You will be given an excerpt from a text. Compress the excerpt as tightly as possible. Keep important details the same: characters, dialogue, passage of time, tense, and point-of-view."},
+            {"role": "system", "content": system_message},
             {"role": "user", "content": element}
         ]
     )
