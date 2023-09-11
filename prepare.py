@@ -13,7 +13,7 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 model = "gpt-4"
-jsonl_file = "data/06-07.jsonl"
+jsonl_file = "data/08-06.jsonl"
 doc_file = "doc.txt"
 system_message = "You will be given an excerpt from a text. Compress the excerpt as tightly as possible. Keep important details the same: characters, dialogue, passage of time, tense, and point-of-view."
 
